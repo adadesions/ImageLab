@@ -19,7 +19,7 @@ fmask = np.fft.fft2(mask)
 fimg = np.fft.fft2(img)
 fsImg = np.fft.fftshift(fimg)
 fsMask = np.fft.fftshift(fmask)
-res = fsMask*fsImg
+res = fsMask+fsImg
 
 
 mag = np.log(np.abs(res))
